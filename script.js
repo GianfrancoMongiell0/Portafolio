@@ -49,7 +49,7 @@ function ploop(){
 ploop();
 
 // ── TYPEWRITER ──
-const roles=['SAP ABAP Consultant @ C2S','Ing. Sistemas · UNIMET','SAP Build Associate ✓','React · Java · Flutter · Angular','Disponible para trabajo remoto 🌎'];
+const roles=['SAP ABAP Consultant @ C2S','Ing. Sistemas · UNIMET','SAP Build Associate ✓','React · Java · Flutter · Node.js','Disponible para trabajo remoto 🌎'];
 let ri=0,ci=0,del=false;
 const tw=document.getElementById('typewriter');
 function type(){
@@ -112,8 +112,8 @@ new Chart(document.getElementById('chart-quinela'),{
 
 new Chart(document.getElementById('chart-skills'),{
   type:'radar',
-  data:{labels:['SAP ABAP','SAP Build','React','Java','Flutter','Angular'],
-    datasets:[{label:'Nivel',data:[82,75,78,74,70,68],backgroundColor:'rgba(124,58,237,.12)',borderColor:'rgba(124,58,237,.7)',borderWidth:1.5,pointBackgroundColor:'rgba(0,229,200,.9)',pointRadius:3}]},
+  data:{labels:['SAP ABAP','SAP Build','React','Java','Flutter','Node.js'],
+    datasets:[{label:'Nivel',data:[82,75,78,74,70,72],backgroundColor:'rgba(124,58,237,.12)',borderColor:'rgba(124,58,237,.7)',borderWidth:1.5,pointBackgroundColor:'rgba(0,229,200,.9)',pointRadius:3}]},
   options:{responsive:true,plugins:{legend:{display:false}},
     scales:{r:{ticks:{display:false,stepSize:20},grid:{color:gc()},angleLines:{color:gc()},pointLabels:{color:tc(),font:{family:'JetBrains Mono',size:9}},min:0,max:100}}}
 });
@@ -283,7 +283,7 @@ CERTIFICACIONES
 STACK TÉCNICO
 • SAP ABAP — Reports ALV, SmartForms, BADIs, RFCs, BAPIs
 • SAP Build — Process Automation, Low-Code Apps
-• React / Angular — SPAs, componentes, APIs REST
+• React — SPAs, hooks, consumo de APIs REST
 • Java — OOP, Threads, Estructuras de Datos
 • Flutter / Dart — Apps móviles cross-platform
 • MongoDB / Node.js — Backend y bases de datos NoSQL
@@ -296,7 +296,7 @@ MÓDULOS SAP: FI · MM · SD · CO · HR
 PROYECTOS DESTACADOS
 • Quiniela Mundial 2026 — App React para C2S
 • App Finanzas Multi-Divisa — Flutter (personal)
-• Gestor de Condominios — Angular (UNIMET)
+• Task Manager API — Node.js + MongoDB (UNIMET)
 • Descifrador de Criptogramas — Ensamblador (UNIMET)
 • Simulación SO (Hilos + Memoria) — Java (UNIMET)
 • Bloc de Notas Fullstack — React + MongoDB (UNIMET)
