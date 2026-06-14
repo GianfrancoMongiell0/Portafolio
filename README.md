@@ -10,7 +10,7 @@
 
 HTML5 · CSS3 · JavaScript vanilla · Chart.js · Vercel
 
-Sin frameworks. Sin dependencias de build. Un solo `git push` y Vercel despliega en 30 segundos.
+Sin frameworks. Sin dependencias de build. Un solo `git push` y Vercel despliega en 10 segundos.
 
 ---
 
