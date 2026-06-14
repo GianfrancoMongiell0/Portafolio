@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 — Gianfranco Mongiello</title>
+<link rel="stylesheet" href="style.css">
+<style>
+body{display:flex;align-items:center;justify-content:center;min-height:100vh;text-align:center;padding:2rem}
+.err-wrap{max-width:500px;z-index:1;position:relative}
+.err-code{
+  font-family:var(--mono);font-size:clamp(5rem,20vw,10rem);font-weight:700;
+  line-height:1;letter-spacing:-.05em;
+  background:linear-gradient(135deg,var(--a1),var(--a2),var(--a3));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  animation:fadeSlideUp .6s ease both;
+}
+@keyframes fadeSlideUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.err-title{font-size:1.3rem;font-weight:600;color:var(--white);margin:.5rem 0;animation:fadeSlideUp .6s .15s ease both;opacity:0}
+.err-sub{font-family:var(--mono);font-size:.8rem;color:var(--t2);line-height:1.7;margin-bottom:2rem;animation:fadeSlideUp .6s .3s ease both;opacity:0}
+.err-terminal{
+  background:var(--bg2);border:1px solid var(--border);border-radius:6px;
+  padding:1rem 1.3rem;font-family:var(--mono);font-size:.8rem;
+  text-align:left;margin-bottom:2rem;
+  animation:fadeSlideUp .6s .45s ease both;opacity:0;
+}
+.err-back{animation:fadeSlideUp .6s .6s ease both;opacity:0}
+canvas{position:fixed;inset:0;z-index:0;pointer-events:none}
+</style>
+</head>
+<body>
+<canvas id="bg-canvas"></canvas>
+<div class="err-wrap">
+  <div class="err-code">404</div>
+  <div class="err-title">Página no encontrada</div>
+  <p class="err-sub">Esta ruta no existe en el servidor.<br>Puede que la URL esté mal o la página fue eliminada.</p>
+  <div class="err-terminal">
+    <span style="color:var(--a1)">❯ </span><span style="color:var(--white)">GET </span><span style="color:var(--a4)" id="bad-url">/???</span><br>
+    <span style="color:var(--t3)">→ 404 Not Found</span><br>
+    <span style="color:var(--t3)">→ Sugerencia: </span><a href="index.html" style="color:var(--a1);text-decoration:none">volver al inicio ↗</a>
+  </div>
+  <a href="index.html" class="btn btn-c err-back" style="display:inline-block;font-family:var(--mono);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;padding:.7rem 1.6rem;border-radius:3px;background:var(--a1);color:#05080f;transition:all .22s">← Volver al inicio</a>
+</div>
+<script>
+document.getElementById('bad-url').textContent = window.location.pathname;
+// Mini particle bg
+const c=document.getElementById('bg-canvas'),x=c.getContext('2d');
+let W,H,p=[];
+function r(){W=c.width=innerWidth;H=c.height=innerHeight}r();addEventListener('resize',r);
+for(let i=0;i<60;i++)p.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*.8+.2,vx:(Math.random()-.5)*.2,vy:(Math.random()-.5)*.2,a:Math.random()*.2+.03});
+(function loop(){x.clearRect(0,0,W,H);p.forEach(pt=>{pt.x+=pt.vx;pt.y+=pt.vy;if(pt.x<0||pt.x>W)pt.x=Math.random()*W;if(pt.y<0||pt.y>H)pt.y=Math.random()*H;x.beginPath();x.arc(pt.x,pt.y,pt.r,0,Math.PI*2);x.fillStyle=`rgba(0,229,200,${pt.a})`;x.fill()});requestAnimationFrame(loop)})();
+</script>
+</body>
+</html>

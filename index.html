@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gianfranco Mongiello — SAP ABAP Developer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- CURSOR -->
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<!-- SCROLL BAR -->
+<div id="scroll-bar"></div>
+
+<!-- MATRIX CANVAS -->
+<canvas id="matrix-canvas"></canvas>
+<button id="matrix-btn" title="Easter egg 🐣">&lt;/&gt;</button>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">✕ cerrar</button>
+    <div id="modal-content"></div>
+  </div>
+</div>
+
+<canvas id="bg-canvas"></canvas>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <span style="color:var(--t3)">~/</span><span id="nav-path">home</span><span style="color:var(--t3)">$</span><span class="cursor-b"></span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#about">about</a></li>
+    <li><a href="#skills">skills</a></li>
+    <li><a href="#github-stats">github</a></li>
+    <li><a href="#projects">projects</a></li>
+    <li><a href="#certs">certs</a></li>
+    <li><a href="#experience">exp</a></li>
+    <li><a href="#contact">contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="theme-btn" id="theme-toggle">☀️</button>
+    <button class="cv-btn" onclick="downloadCV()">⬇ CV</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-pre">SAP ABAP Developer · Systems Engineer · Venezuela 🇻🇪</div>
+  <h1 class="hero-name">
+    <span class="hero-first glitch" data-text="Gianfranco">Gianfranco</span>
+    <span class="hero-last">Mongiello</span>
+  </h1>
+  <p class="hero-role" id="typewriter"><span class="cursor-b"></span></p>
+  <div class="hero-tags">
+    <span class="tag tc">SAP ABAP</span>
+    <span class="tag tc">SAP Build ✓</span>
+    <span class="tag tv">Python</span>
+    <span class="tag tv">Java</span>
+    <span class="tag to">React</span>
+    <span class="tag to">Flutter</span>
+    <span class="tag tr">Angular</span>
+    <span class="tag tr">MongoDB</span>
+  </div>
+  <div class="hero-btns">
+    <a href="#projects" class="btn btn-c">Ver proyectos</a>
+    <a href="#contact" class="btn btn-o">Hablemos →</a>
+  </div>
+  <div class="terminal reveal">
+    <div class="t-bar">
+      <div class="dot dr"></div><div class="dot dy"></div><div class="dot dg"></div>
+      <span class="t-lbl">gianfranco@c2s ~ zsh</span>
+    </div>
+    <div class="t-body">
+      <div><span class="tp">❯ </span><span class="tc2">node profile.js</span></div>
+      <div><span class="cb">{</span></div>
+      <div>&nbsp;&nbsp;<span class="tk">"nombre"</span><span class="to2">: </span><span class="ts2">"Gianfranco Mongiello"</span><span class="to2">,</span></div>
+      <div>&nbsp;&nbsp;<span class="tk">"rol"</span><span class="to2">: </span><span class="ts2">"SAP ABAP Consultant @ C2S"</span><span class="to2">,</span></div>
+      <div>&nbsp;&nbsp;<span class="tk">"uni"</span><span class="to2">: </span><span class="ts2">"Ing. Sistemas · UNIMET"</span><span class="to2">,</span></div>
+      <div>&nbsp;&nbsp;<span class="tk">"cert"</span><span class="to2">: </span><span class="ts2">"SAP Build Associate ✓"</span><span class="to2">,</span></div>
+      <div>&nbsp;&nbsp;<span class="tk">"open_to_remote"</span><span class="to2">: </span><span class="tv2">true</span><span class="to2">,</span></div>
+      <div>&nbsp;&nbsp;<span class="tk">"ig"</span><span class="to2">: </span><span class="ts2">"@gianfranco_mongiello"</span><span class="to2">,</span></div>
+      <div>&nbsp;&nbsp;<span class="tk">"modulos_sap"</span><span class="to2">: </span><span class="cb">[</span><span class="ts2">"FI"</span><span class="to2">,</span><span class="ts2">"MM"</span><span class="to2">,</span><span class="ts2">"SD"</span><span class="to2">,</span><span class="ts2">"CO"</span><span class="to2">,</span><span class="ts2">"HR"</span><span class="cb">]</span></div>
+      <div><span class="cb">}</span></div>
+      <div style="margin-top:.3rem"><span class="tp">❯ </span><span class="cursor-b"></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <div class="s-label">about.me</div>
+    <h2 class="s-title">El dev detrás<br>del código.</h2>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>Soy estudiante de <strong>Ingeniería de Sistemas en la Universidad Metropolitana (UNIMET)</strong> de Venezuela y consultor ABAP pasante en <strong>C2S</strong>, donde llevo 8 meses trabajando en entornos productivos reales con módulos FI, MM, SD, CO y HR.</p>
+        <p>En la uni construyo con <strong>React, Java, Angular y Flutter</strong>. En el trabajo vivo en <strong>ABAP</strong> — reportes ALV, interfaces, SmartForms, RFCs y BAPIs. Recién certifiqué <strong>SAP Build Associate</strong>, sumando automatización de procesos a mi stack.</p>
+        <p>Me motiva construir cosas que la gente use de verdad. Soy de los que aprende haciendo, resuelve rápido cuando hay que resolver, y no para hasta que funciona.</p>
+      </div>
+      <div>
+        <div class="code-card reveal">
+<span class="cc">// Gianfranco_Mongiello.py</span><br><br>
+<span class="ck">class</span> <span class="cf">Dev</span><span class="cb">:</span><br>
+&nbsp;&nbsp;<span class="ck">def</span> <span class="cf">__init__</span><span class="cb">(self):</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;self.nombre &nbsp;= <span class="cs">"Gianfranco Mongiello"</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;self.uni &nbsp;&nbsp;&nbsp;&nbsp;= <span class="cs">"UNIMET · Ing. Sistemas"</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;self.trabajo = <span class="cs">"C2S · SAP ABAP"</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;self.cert &nbsp;&nbsp;&nbsp;= <span class="cs">"SAP Build Assoc. ✓"</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;self.pais &nbsp;&nbsp;&nbsp;= <span class="cs">"Venezuela 🇻🇪"</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;self.meta &nbsp;&nbsp;&nbsp;= <span class="cs">"Trabajo remoto SAP"</span><br><br>
+&nbsp;&nbsp;<span class="ck">def</span> <span class="cf">disponible</span><span class="cb">(self):</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="ck">return</span> <span class="cn">True</span> <span class="cc"># siempre</span>
+        </div>
+        <div class="stats-row">
+          <div class="stat">
+            <div class="stat-n" data-target="8">0<em>m</em></div>
+            <div class="stat-l">Exp. SAP</div>
+          </div>
+          <div class="stat">
+            <div class="stat-n" data-target="5">0</div>
+            <div class="stat-l">Módulos</div>
+          </div>
+          <div class="stat">
+            <div class="stat-n" data-target="10">0<em>+</em></div>
+            <div class="stat-l">Proyectos</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="wrap">
+    <div class="s-label">skills.json</div>
+    <h2 class="s-title">Stack técnico.</h2>
+    <div class="skills-grid" id="skills-grid">
+      <div class="sk-card" data-lvl="82" data-fill="fc">
+        <div class="sk-top"><div class="sk-ico">🔷</div><div><div class="sk-name">SAP ABAP</div><div class="sk-cat">ENTERPRISE · ERP</div></div></div>
+        <div class="sk-desc">Reports ALV, SmartForms, Adobe Forms, RFCs, BAPIs e interfaces. FI, MM, SD, CO y HR en entornos productivos reales en C2S.</div>
+        <div class="sk-bar"><div class="sk-fill fc"></div></div>
+      </div>
+      <div class="sk-card" data-lvl="75" data-fill="fc">
+        <div class="sk-top"><div class="sk-ico">⚡</div><div><div class="sk-name">SAP Build</div><div class="sk-cat">LOW-CODE · CERTIFICADO</div></div></div>
+        <div class="sk-desc">Certificación SAP Build Associate. Apps low-code y automatización de procesos con SAP Build Process Automation.</div>
+        <div class="sk-bar"><div class="sk-fill fc"></div></div>
+      </div>
+      <div class="sk-card" data-lvl="78" data-fill="fo">
+        <div class="sk-top"><div class="sk-ico">⚛️</div><div><div class="sk-name">React</div><div class="sk-cat">FRONTEND · UI</div></div></div>
+        <div class="sk-desc">SPAs, hooks, consumo de APIs. Agrupaciones universitarias UNIMET y app de quiniela para el Mundial 2026 en C2S.</div>
+        <div class="sk-bar"><div class="sk-fill fo"></div></div>
+      </div>
+      <div class="sk-card" data-lvl="74" data-fill="fv">
+        <div class="sk-top"><div class="sk-ico">☕</div><div><div class="sk-name">Java</div><div class="sk-cat">BACKEND · OOP</div></div></div>
+        <div class="sk-desc">OOP, hilos, simulación de memoria. Base sólida en Sistemas Operativos y Estructuras de Datos en la UNIMET.</div>
+        <div class="sk-bar"><div class="sk-fill fv"></div></div>
+      </div>
+      <div class="sk-card" data-lvl="70" data-fill="fo">
+        <div class="sk-top"><div class="sk-ico">📱</div><div><div class="sk-name">Flutter</div><div class="sk-cat">MOBILE · CROSS-PLATFORM</div></div></div>
+        <div class="sk-desc">App personal de finanzas multi-divisa: bolívares, dólares y criptomonedas. Proyecto propio en uso real.</div>
+        <div class="sk-bar"><div class="sk-fill fo"></div></div>
+      </div>
+      <div class="sk-card" data-lvl="68" data-fill="fv">
+        <div class="sk-top"><div class="sk-ico">🅰️</div><div><div class="sk-name">Angular + MongoDB</div><div class="sk-cat">FULLSTACK</div></div></div>
+        <div class="sk-desc">Gestor de condominios en Angular (Ing. Software). Bloc de notas con React + MongoDB (Base de Datos). Proyectos grupales UNIMET.</div>
+        <div class="sk-bar"><div class="sk-fill fv"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GITHUB STATS -->
+<section id="github-stats">
+  <div class="wrap">
+    <div class="s-label">github.activity</div>
+    <h2 class="s-title">En GitHub.</h2>
+    <div class="gh-grid">
+      <div class="gh-card reveal" style="padding:1.5rem;flex-direction:column;align-items:flex-start;gap:.8rem">
+        <div style="font-family:var(--mono);font-size:.62rem;color:var(--t3);letter-spacing:.1em;text-transform:uppercase">Stats generales</div>
+        <div id="gh-manual-stats" style="width:100%">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:.8rem">
+            <div style="background:var(--bg3);border:1px solid var(--border);border-radius:4px;padding:.9rem">
+              <div style="font-size:1.4rem;font-weight:600;color:var(--white)" id="gh-repos">...</div>
+              <div style="font-family:var(--mono);font-size:.6rem;color:var(--t3);text-transform:uppercase;letter-spacing:.1em;margin-top:.2rem">Repositorios</div>
+            </div>
+            <div style="background:var(--bg3);border:1px solid var(--border);border-radius:4px;padding:.9rem">
+              <div style="font-size:1.4rem;font-weight:600;color:var(--a1)" id="gh-stars">...</div>
+              <div style="font-family:var(--mono);font-size:.6rem;color:var(--t3);text-transform:uppercase;letter-spacing:.1em;margin-top:.2rem">Stars totales</div>
+            </div>
+            <div style="background:var(--bg3);border:1px solid var(--border);border-radius:4px;padding:.9rem">
+              <div style="font-size:1.4rem;font-weight:600;color:var(--a2)" id="gh-followers">...</div>
+              <div style="font-family:var(--mono);font-size:.6rem;color:var(--t3);text-transform:uppercase;letter-spacing:.1em;margin-top:.2rem">Seguidores</div>
+            </div>
+            <div style="background:var(--bg3);border:1px solid var(--border);border-radius:4px;padding:.9rem">
+              <div style="font-size:1.4rem;font-weight:600;color:var(--a3)" id="gh-following">...</div>
+              <div style="font-family:var(--mono);font-size:.6rem;color:var(--t3);text-transform:uppercase;letter-spacing:.1em;margin-top:.2rem">Siguiendo</div>
+            </div>
+          </div>
+        </div>
+        <a href="https://github.com/GianfrancoMongiell0" target="_blank"
+           style="font-family:var(--mono);font-size:.72rem;color:var(--a1);text-decoration:none;display:flex;align-items:center;gap:.4rem;transition:gap .2s"
+           onmouseover="this.style.gap='.7rem'" onmouseout="this.style.gap='.4rem'">
+          Ver perfil completo →
+        </a>
+      </div>
+      <div class="gh-card reveal" style="padding:1.5rem;flex-direction:column;align-items:flex-start;gap:.8rem">
+        <div style="font-family:var(--mono);font-size:.62rem;color:var(--t3);letter-spacing:.1em;text-transform:uppercase">Lenguajes en repos públicos</div>
+        <div style="display:flex;flex-direction:column;gap:.5rem;width:100%" id="gh-langs-bars">
+          <div style="display:flex;align-items:center;gap:.7rem"><span style="font-family:var(--mono);font-size:.7rem;color:var(--a3);min-width:90px">JavaScript</span><div style="flex:1;height:3px;background:var(--border);border-radius:2px"><div style="width:70%;height:100%;background:var(--a3);border-radius:2px;transition:width 1s ease" class="gh-bar"></div></div><span style="font-family:var(--mono);font-size:.65rem;color:var(--t3)">70%</span></div>
+          <div style="display:flex;align-items:center;gap:.7rem"><span style="font-family:var(--mono);font-size:.7rem;color:var(--a4);min-width:90px">Java</span><div style="flex:1;height:3px;background:var(--border);border-radius:2px"><div style="width:15%;height:100%;background:var(--a4);border-radius:2px;transition:width 1s ease" class="gh-bar"></div></div><span style="font-family:var(--mono);font-size:.65rem;color:var(--t3)">15%</span></div>
+          <div style="display:flex;align-items:center;gap:.7rem"><span style="font-family:var(--mono);font-size:.7rem;color:var(--a2);min-width:90px">Dart</span><div style="flex:1;height:3px;background:var(--border);border-radius:2px"><div style="width:8%;height:100%;background:var(--a2);border-radius:2px;transition:width 1s ease" class="gh-bar"></div></div><span style="font-family:var(--mono);font-size:.65rem;color:var(--t3)">8%</span></div>
+          <div style="display:flex;align-items:center;gap:.7rem"><span style="font-family:var(--mono);font-size:.7rem;color:var(--a1);min-width:90px">TypeScript</span><div style="flex:1;height:3px;background:var(--border);border-radius:2px"><div style="width:7%;height:100%;background:var(--a1);border-radius:2px;transition:width 1s ease" class="gh-bar"></div></div><span style="font-family:var(--mono);font-size:.65rem;color:var(--t3)">7%</span></div>
+        </div>
+        <div style="font-family:var(--mono);font-size:.6rem;color:var(--t3);margin-top:.3rem">* Basado en repos públicos actuales</div>
+      </div>
+      <div class="gh-card gh-card-full reveal" style="padding:1.6rem;flex-direction:column;gap:1rem">
+        <div style="font-family:var(--mono);font-size:.62rem;color:var(--t3);letter-spacing:.1em;text-transform:uppercase">Actividad — últimas 26 semanas</div>
+        <div id="heatmap" style="display:flex;gap:3px;flex-wrap:nowrap;overflow-x:auto;padding-bottom:.3rem"></div>
+        <div style="display:flex;align-items:center;gap:.5rem;margin-top:.2rem">
+          <span style="font-family:var(--mono);font-size:.6rem;color:var(--t3)">Menos</span>
+          <div style="width:10px;height:10px;border-radius:2px;background:var(--border)"></div>
+          <div style="width:10px;height:10px;border-radius:2px;background:rgba(0,229,200,.25)"></div>
+          <div style="width:10px;height:10px;border-radius:2px;background:rgba(0,229,200,.5)"></div>
+          <div style="width:10px;height:10px;border-radius:2px;background:var(--a1)"></div>
+          <span style="font-family:var(--mono);font-size:.6rem;color:var(--t3)">Más</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="wrap">
+    <div class="s-label">projects[]</div>
+    <h2 class="s-title">Cosas que<br>he construido.</h2>
+    <div class="bento">
+
+      <div class="bc b7 acc-o reveal" onclick="openModal('quinela')">
+        <div class="p-cat cat-per">Personal · Click para ver más</div>
+        <div class="p-num">PROYECTO DESTACADO</div>
+        <div class="p-name">Quiniela Mundial 2026 ⚽</div>
+        <div class="p-desc">App React para gestionar pronósticos del Mundial 2026. La armé para mis compañeros de C2S. Puntos, tabla de posiciones en tiempo real y rondas automáticas.</div>
+        <div class="p-visual"><canvas id="chart-quinela" style="width:100%;padding:.8rem" height="110"></canvas></div>
+        <div class="p-badges"><span class="p-badge">React</span><span class="p-badge">JavaScript</span><span class="p-badge">CSS</span></div>
+        <span class="p-link">Ver detalles →</span>
+      </div>
+
+      <div class="bc b5 acc-v reveal" onclick="openModal('finanzas')">
+        <div class="p-cat cat-per">Personal · Click para ver más</div>
+        <div class="p-num">002</div>
+        <div class="p-name">App Finanzas Multi-Divisa 💱</div>
+        <div class="p-desc">Flutter app que unifica bolívares, dólares y criptomonedas. Hecha para resolver la realidad financiera venezolana.</div>
+        <div class="p-badges"><span class="p-badge">Flutter</span><span class="p-badge">Dart</span><span class="p-badge">APIs</span></div>
+        <span class="p-link">Ver detalles →</span>
+      </div>
+
+      <div class="bc b4 acc-c reveal" onclick="openModal('agrupaciones')">
+        <div class="p-cat cat-uni">Universidad</div>
+        <div class="p-num">003</div>
+        <div class="p-name">Agrupaciones Universitarias</div>
+        <div class="p-desc">Web React para gestionar agrupaciones estudiantiles UNIMET. Proyecto grupal de Sistemas de Información.</div>
+        <div class="p-badges"><span class="p-badge">React</span><span class="p-badge">JavaScript</span></div>
+        <span class="p-link">Ver detalles →</span>
+      </div>
+
+      <div class="bc b4 acc-v reveal" onclick="openModal('condominio')">
+        <div class="p-cat cat-uni">Universidad</div>
+        <div class="p-num">004</div>
+        <div class="p-name">Gestor de Condominios Web</div>
+        <div class="p-desc">Sistema Angular para administración de condominios. CRUD, gestión de residentes y pagos. Ing. de Software.</div>
+        <div class="p-badges"><span class="p-badge">Angular</span><span class="p-badge">TypeScript</span></div>
+        <span class="p-link">Ver detalles →</span>
+      </div>
+
+      <div class="bc b4 acc-r reveal" onclick="openModal('notas')">
+        <div class="p-cat cat-uni">Universidad</div>
+        <div class="p-num">005</div>
+        <div class="p-name">Bloc de Notas React + MongoDB</div>
+        <div class="p-desc">App de recordatorios fullstack con persistencia MongoDB. Proyecto de Base de Datos UNIMET.</div>
+        <div class="p-badges"><span class="p-badge">React</span><span class="p-badge">MongoDB</span><span class="p-badge">Node.js</span></div>
+        <span class="p-link">Ver detalles →</span>
+      </div>
+
+      <div class="bc b12 acc-v reveal" style="flex-direction:row;align-items:center;gap:2rem;flex-wrap:wrap" onclick="openModal('sistemas')">
+        <div style="flex:1;min-width:200px">
+          <div class="p-cat cat-uni">Universidad · Click para ver más</div>
+          <div class="p-num">PROYECTOS DE SISTEMAS</div>
+          <div class="p-name">Bajo Nivel — Java, Ensamblador & más</div>
+          <div class="p-desc">Simulación de hilos y memoria en Java (SO), criptogramas en Ensamblador (Org. Computador), calculadora de matrices (Álgebra Lineal), simulación de impresora con grafos (Estructuras de Datos).</div>
+          <div class="p-badges">
+            <span class="p-badge">Java</span><span class="p-badge">Threads</span>
+            <span class="p-badge">Ensamblador</span><span class="p-badge">Grafos</span><span class="p-badge">Álgebra Lineal</span>
+          </div>
+          <span class="p-link">Ver detalles →</span>
+        </div>
+        <div style="flex:1;min-width:200px">
+          <canvas id="chart-skills" height="150" style="width:100%"></canvas>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CERTS -->
+<section id="certs">
+  <div class="wrap">
+    <div class="s-label">certifications[]</div>
+    <h2 class="s-title">Certificaciones.</h2>
+    <div class="cert-grid">
+      <div class="cert-card reveal">
+        <div class="cert-ico">⚡</div>
+        <div><div class="cert-name">SAP Build Associate</div><div class="cert-org">SAP · OFICIAL</div><div class="cert-year">2024 — Vigente</div></div>
+      </div>
+      <div class="cert-card reveal" style="opacity:.5;border-style:dashed">
+        <div class="cert-ico">🔷</div>
+        <div><div class="cert-name" style="color:var(--t2)">SAP ABAP Developer</div><div class="cert-org">SAP · EN CAMINO</div><div class="cert-year" style="color:var(--t3)">Próxima meta</div></div>
+      </div>
+      <div class="cert-card reveal" style="opacity:.5;border-style:dashed">
+        <div class="cert-ico">🎓</div>
+        <div><div class="cert-name" style="color:var(--t2)">Ing. de Sistemas</div><div class="cert-org">UNIMET · EN CURSO</div><div class="cert-year" style="color:var(--t3)">Estudiando + trabajando</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- LANGUAGES -->
+<section id="languages">
+  <div class="wrap">
+    <div class="s-label">languages[]</div>
+    <h2 class="s-title">Idiomas.</h2>
+    <div class="langs-grid">
+      <div class="lang-card reveal">
+        <div class="lang-flag">🇻🇪</div>
+        <div>
+          <div class="lang-name">Español</div>
+          <div class="lang-level">Nativo</div>
+          <div class="lang-dots">
+            <div class="lang-dot on"></div><div class="lang-dot on"></div>
+            <div class="lang-dot on"></div><div class="lang-dot on"></div>
+            <div class="lang-dot on"></div>
+          </div>
+        </div>
+      </div>
+      <div class="lang-card reveal">
+        <div class="lang-flag">🇺🇸</div>
+        <div>
+          <div class="lang-name">Inglés</div>
+          <div class="lang-level">Básico — en progreso</div>
+          <div class="lang-dots">
+            <div class="lang-dot on"></div><div class="lang-dot"></div>
+            <div class="lang-dot"></div><div class="lang-dot"></div>
+            <div class="lang-dot"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="wrap">
+    <div class="s-label">experience.log</div>
+    <h2 class="s-title">Experiencia.</h2>
+    <div class="timeline">
+      <div class="tl reveal">
+        <div class="tl-date">2024 — PRESENTE · 8 MESES</div>
+        <div class="tl-role">SAP ABAP Consultant (Pasante)</div>
+        <div class="tl-co">C2S — Consultoría SAP · Venezuela</div>
+        <div class="tl-desc">Soporte funcional y desarrollo en módulos FI, MM, SD, CO y HR. Reportes ALV, SmartForms, Adobe Forms, RFCs e interfaces. Entornos productivos reales, soluciones bajo presión.</div>
+      </div>
+      <div class="tl reveal">
+        <div class="tl-date">2021 — PRESENTE</div>
+        <div class="tl-role">Estudiante Ing. de Sistemas</div>
+        <div class="tl-co">Universidad Metropolitana (UNIMET) · Caracas, Venezuela</div>
+        <div class="tl-desc">Carrera en curso. Proyectos en Java, React, Angular, MongoDB, Ensamblador y Flutter. Trabajo en equipo y fundamentos sólidos desde lo más bajo hasta la capa web.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <div class="s-label">contact.sh</div>
+    <h2 class="s-title">¿Trabajamos?</h2>
+    <div class="contact-grid">
+      <div class="reveal">
+        <p class="contact-intro">Disponible para proyectos remotos SAP, consultoría ABAP y oportunidades de crecimiento. Respondo rápido, siempre.</p>
+        <div class="c-links">
+          <a href="mailto:gianfrancomongielloflores@gmail.com" class="c-link"><div class="c-ico">📧</div>gianfrancomongielloflores@gmail.com</a>
+          <a href="https://www.linkedin.com/in/gianfranco-mongiello-flores-4763031b8" target="_blank" class="c-link"><div class="c-ico">💼</div>linkedin · Gianfranco Mongiello Flores</a>
+          <a href="https://github.com/GianfrancoMongiell0" target="_blank" class="c-link"><div class="c-ico">🐙</div>github · GianfrancoMongiell0</a>
+          <a href="https://instagram.com/gianfranco_mongiello" target="_blank" class="c-link"><div class="c-ico">📸</div>instagram · @gianfranco_mongiello</a>
+          <a href="https://wa.me/584241643727" target="_blank" class="c-link"><div class="c-ico">💬</div>whatsapp · +58 424 164 3727</a>
+        </div>
+      </div>
+      <div class="contact-form reveal">
+        <div class="fg"><label>Nombre</label><input type="text" id="f-name" placeholder="Tu nombre"></div>
+        <div class="fg"><label>Email</label><input type="email" id="f-email" placeholder="tu@email.com"></div>
+        <div class="fg"><label>Mensaje</label><textarea id="f-msg" placeholder="¿En qué te puedo ayudar?"></textarea></div>
+        <button class="btn btn-c" style="align-self:flex-start;margin-top:.3rem" onclick="sendMsg()">Enviar mensaje</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>© 2025 Gianfranco Mongiello · Caracas 🇻🇪</span>
+  <div class="social-footer">
+    <a href="https://github.com/GianfrancoMongiell0" target="_blank" class="sf-link" title="GitHub">🐙</a>
+    <a href="https://www.linkedin.com/in/gianfranco-mongiello-flores-4763031b8" target="_blank" class="sf-link" title="LinkedIn">💼</a>
+    <a href="https://instagram.com/gianfranco_mongiello" target="_blank" class="sf-link" title="Instagram">📸</a>
+    <a href="https://wa.me/584241643727" target="_blank" class="sf-link" title="WhatsApp">💬</a>
+    <a href="mailto:gianfrancomongielloflores@gmail.com" class="sf-link" title="Email">📧</a>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
