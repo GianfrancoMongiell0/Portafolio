@@ -121,7 +121,7 @@ new Chart(document.getElementById('chart-skills'),{
 // ── MODALS ──
 const PROJECTS={
   quinela:{
-    name:'Quiniela Mundial 2026 ⚽',
+    name:'Quiniela Mundial 2026',
     cat:'cat-per',catLabel:'Personal',
     url:'https://qwc-2026.vercel.app',
     repo:'https://github.com/GianfrancoMongiell0/QWC2026',
@@ -139,7 +139,7 @@ const PROJECTS={
     ]
   },
   finanzas:{
-    name:'FinVE — Finanzas Multi-Divisa 💱',
+    name:'FinVE — Finanzas Multi-Divisa',
     cat:'cat-per',catLabel:'Personal',
     repo:'https://github.com/GianfrancoMongiell0/FinVE',
     desc:'App Android de finanzas personales diseñada para el contexto venezolano: soporte nativo para bolívares, dólares y criptomonedas (BTC, ETH, SOL) con tasas BCV y paralelo actualizadas cada 30 minutos. Funciona completamente offline — todos los datos viven en el teléfono.',
