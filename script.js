@@ -233,82 +233,10 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
 
 // ── CV DOWNLOAD ──
 function downloadCV(){
-  const cv=`GIANFRANCO MONGIELLO FLORES
-SAP ABAP Developer · Systems Engineer
-Caracas, Venezuela 🇻🇪
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-CONTACTO
-Email:     gianfrancomongielloflores@gmail.com
-LinkedIn:  linkedin.com/in/gianfranco-mongiello-flores-4763031b8
-GitHub:    github.com/GianfrancoMongiell0
-Instagram: @gianfranco_mongiello
-WhatsApp:  +58 424 164 3727
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-PERFIL PROFESIONAL
-Estudiante de Ingeniería de Sistemas en la Universidad Metropolitana (UNIMET)
-y consultor SAP ABAP pasante en C2S. 8 meses de experiencia en entornos
-productivos reales trabajando módulos FI, MM, SD, CO y HR. Certificado
-SAP Build Associate (2024). Apasionado por construir soluciones que la gente
-use de verdad.
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-EXPERIENCIA
-
-SAP ABAP Consultant (Pasante)               2024 — Presente
-C2S · Caracas, Venezuela
-• Soporte funcional en módulos FI, MM, SD, CO y HR
-• Desarrollo de reportes ALV, SmartForms y Adobe Forms
-• Implementación de RFCs, BAPIs e interfaces con sistemas externos
-• Entornos SAP productivos reales
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-EDUCACIÓN
-
-Ing. de Sistemas (En curso)                 2021 — Presente
-Universidad Metropolitana (UNIMET) · Caracas, Venezuela
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-CERTIFICACIONES
-• SAP Build Associate — SAP Oficial (2024, vigente)
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-STACK TÉCNICO
-• SAP ABAP — Reports ALV, SmartForms, BADIs, RFCs, BAPIs
-• SAP Build — Process Automation, Low-Code Apps
-• React — SPAs, hooks, consumo de APIs REST
-• Java — OOP, Threads, Estructuras de Datos
-• Flutter / Dart — Apps móviles cross-platform
-• MongoDB / Node.js — Backend y bases de datos NoSQL
-• Ensamblador x86
-
-MÓDULOS SAP: FI · MM · SD · CO · HR
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-PROYECTOS DESTACADOS
-• Quiniela Mundial 2026 — App React para C2S
-• App Finanzas Multi-Divisa — Flutter (personal)
-• Task Manager API — Node.js + MongoDB (UNIMET)
-• Descifrador de Criptogramas — Ensamblador (UNIMET)
-• Simulación SO (Hilos + Memoria) — Java (UNIMET)
-• Bloc de Notas Fullstack — React + MongoDB (UNIMET)
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-gianfrancomongielloflores@gmail.com
-`;
-  const blob=new Blob([cv],{type:'text/plain;charset=utf-8'});
-  const url=URL.createObjectURL(blob);
   const a=document.createElement('a');
-  a.href=url;a.download='CV_Gianfranco_Mongiello.txt';a.click();
-  URL.revokeObjectURL(url);
+  a.href='CV_Gianfranco_Mongiello.pdf';
+  a.download='CV_Gianfranco_Mongiello.pdf';
+  a.click();
 }
 
 // ── WHATSAPP FORM ──
