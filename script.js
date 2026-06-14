@@ -120,22 +120,132 @@ new Chart(document.getElementById('chart-skills'),{
 
 // ── MODALS ──
 const PROJECTS={
-  quinela:{name:'Quiniela Mundial 2026 ⚽',cat:'cat-per',catLabel:'Personal',desc:'App React para gestionar los pronósticos del Mundial de Fútbol 2026. La construí pensando en mis compañeros de trabajo en C2S para que pudiéramos jugar juntos. Sistema de puntos automático, tabla de posiciones en tiempo real, gestión de rondas y enfrentamientos.',stack:['React','JavaScript','CSS','LocalStorage'],features:['Registro de predicciones por partido','Tabla de posiciones automática','Rondas: grupos, octavos, cuartos, semis y final','Diseño responsive para ver desde el celular']},
-  finanzas:{name:'App Finanzas Multi-Divisa 💱',cat:'cat-per',catLabel:'Personal',desc:'App Flutter que unifica mis finanzas en bolívares, dólares y criptomonedas en una sola vista. Creada para resolver un problema real de vivir en Venezuela donde manejas múltiples monedas a diario. Incluye conversión automática con tasas actualizadas.',stack:['Flutter','Dart','APIs de tasa de cambio','Crypto API'],features:['Balance unificado BsS + USD + Crypto','Conversión automática en tiempo real','Historial de movimientos','Gráficas de balance mensual']},
-  agrupaciones:{name:'Agrupaciones Universitarias UNIMET',cat:'cat-uni',catLabel:'Universidad — Sistemas de Información',desc:'Web React para gestionar las agrupaciones estudiantiles de la Universidad Metropolitana. Proyecto grupal de la materia Sistemas de Información. Permite registrar agrupaciones, miembros y actividades.',stack:['React','JavaScript','CSS'],features:['CRUD de agrupaciones estudiantiles','Gestión de miembros','Registro de actividades y eventos','Interfaz web responsive']},
-  condominio:{name:'Gestor de Condominios Web',cat:'cat-uni',catLabel:'Universidad — Ing. de Software',desc:'Sistema web completo en Angular para la administración de condominios. Desarrollado en equipo para la materia Ingeniería de Software. Cubre la gestión de residentes, pagos y comunicados.',stack:['Angular','TypeScript','CSS'],features:['Gestión de residentes y propiedades','Control de pagos de condominio','Sistema de comunicados internos','Reportes de morosos']},
-  notas:{name:'Bloc de Notas con React + MongoDB',cat:'cat-uni',catLabel:'Universidad — Base de Datos',desc:'Aplicación fullstack de recordatorios y notas con persistencia en MongoDB. Proyecto de la materia Base de Datos en la UNIMET. Primer acercamiento real a una arquitectura fullstack con base de datos NoSQL.',stack:['React','Node.js','MongoDB','Express'],features:['Crear, editar y eliminar notas','Persistencia real en MongoDB','Búsqueda por título','Etiquetas y categorías']},
-  sistemas:{name:'Proyectos de Sistemas — Bajo Nivel',cat:'cat-uni',catLabel:'Universidad — Múltiples materias',desc:'Colección de proyectos académicos que exploran el funcionamiento interno de los sistemas computacionales desde distintos niveles de abstracción.',stack:['Java','Ensamblador x86','Estructuras de Datos','Álgebra Lineal'],features:['Simulación de impresora con grafos y árboles (Estructuras de Datos)','Gestión de hilos y procesos concurrentes en Java (Sistemas Operativos)','Simulación de bloques de memoria RAM en Java (Sistemas Operativos)','Descifrador de criptogramas en Ensamblador x86 (Org. del Computador)','Calculadora de matrices con operaciones avanzadas (Álgebra Lineal)']}
+  quinela:{
+    name:'Quiniela Mundial 2026 ⚽',
+    cat:'cat-per',catLabel:'Personal',
+    url:'https://qwc-2026.vercel.app',
+    repo:'https://github.com/GianfrancoMongiell0/QWC2026',
+    desc:'SPA + PWA corporativa para pronosticar los 104 partidos del FIFA World Cup 2026. Construida para mis compañeros de C2S — sistema de puntos automático vía trigger PostgreSQL, ligas privadas con código de invitación y tabla de posiciones en tiempo real con Supabase Realtime.',
+    highlight:'Los puntos se calculan automáticamente en la BD cuando el admin ingresa el resultado — sin intervención manual.',
+    stack:['React 18','Vite 5','Tailwind CSS','Supabase','PostgreSQL','PWA'],
+    features:[
+      '🏆 Ligas privadas con código de invitación y compartir por WhatsApp',
+      '⚽ 104 partidos: 72 de grupos + 32 eliminatorios con bracket autocompleto',
+      '🥅 Predicción de penales en partidos de eliminatoria',
+      '📊 Tabla de posiciones en tiempo real (Supabase Realtime)',
+      '🔒 Anti-trampa: doble bloqueo frontend + PostgreSQL desde el 11 de junio',
+      '📱 PWA instalable — funciona como app nativa en móvil',
+      '⭐ Sistema de puntos: marcador exacto 3pts · tendencia correcta 2pts · fallo 0pts'
+    ]
+  },
+  finanzas:{
+    name:'FinVE — Finanzas Multi-Divisa 💱',
+    cat:'cat-per',catLabel:'Personal',
+    repo:'https://github.com/GianfrancoMongiell0/FinVE',
+    desc:'App Android de finanzas personales diseñada para el contexto venezolano: soporte nativo para bolívares, dólares y criptomonedas (BTC, ETH, SOL) con tasas BCV y paralelo actualizadas cada 30 minutos. Funciona completamente offline — todos los datos viven en el teléfono.',
+    highlight:'Sin servidores externos. Toda la data vive en SQLite local en el dispositivo.',
+    stack:['Flutter 3.44','Dart 3.12','Riverpod','SQLite','local_auth','fl_chart'],
+    features:[
+      '💰 Billeteras en USD, VES, BTC, ETH y SOL con conversión automática',
+      '📊 Dashboard con evolución de balance, resumen mensual y gastos por categoría',
+      '🔒 PIN cifrado en EncryptedSharedPreferences + autenticación biométrica',
+      '🔁 Gastos recurrentes con auto-registro y notificación con acción directa',
+      '🎯 Metas financieras con calculadora de tiempo para alcanzarlas',
+      '📱 Widget de pantalla de inicio con balance total',
+      '🎨 5 temas visuales: Ocean Blue · Slate Amber · Emerald Gold · Rose Night · Violet Sunset'
+    ]
+  },
+  agrupaciones:{
+    name:'Agrupaciones Universitarias UNIMET',
+    cat:'cat-uni',catLabel:'Universidad — Sistemas de Información',
+    repo:'https://github.com/GianfrancoMongiell0/VFinalBD',
+    desc:'Plataforma web React para gestionar las agrupaciones estudiantiles de la UNIMET. Permite registrar agrupaciones, gestionar miembros y coordinar actividades. Proyecto grupal de la materia Sistemas de Información.',
+    stack:['React','JavaScript','CSS'],
+    features:[
+      'CRUD completo de agrupaciones estudiantiles',
+      'Gestión de miembros por agrupación',
+      'Registro de actividades y eventos',
+      'Interfaz responsive'
+    ]
+  },
+  condominio:{
+    name:'Gestor de Condominios Web',
+    cat:'cat-uni',catLabel:'Universidad — Ing. de Software',
+    desc:'Sistema web en Angular para la administración de condominios. Cubre gestión de residentes, control de pagos y comunicados internos. Proyecto grupal de Ingeniería de Software con metodología formal de desarrollo.',
+    stack:['Angular','TypeScript','CSS'],
+    features:[
+      'CRUD de residentes y propiedades',
+      'Control de pagos de condominio',
+      'Sistema de comunicados internos',
+      'Reportes de morosos'
+    ]
+  },
+  notas:{
+    name:'Task Manager API — Base de Datos',
+    cat:'cat-uni',catLabel:'Universidad — Base de Datos',
+    repo:'https://github.com/GianfrancoMongiell0/VFinalBD',
+    desc:'REST API fullstack con autenticación stateless por cookies httpOnly JWT. El token nunca es accesible desde el cliente (protección XSS). Validación de entradas con Zod antes de llegar al controlador. Arquitectura MVC limpia con soporte para producción.',
+    highlight:'El middleware validateSchema es un Higher Order Function: recibe un schema Zod y devuelve un middleware Express — patrón reutilizable en todas las rutas.',
+    stack:['Node.js','Express','MongoDB','Mongoose','JWT','Zod','bcryptjs','Docker'],
+    features:[
+      '🔐 Auth con cookies httpOnly — JWT inaccesible desde JS del cliente',
+      '✅ Validación con Zod en middleware reutilizable (Higher Order Function)',
+      '🗂️ Tareas asociadas a usuario vía Mongoose ref + populate',
+      '🐳 Docker Compose para levantar MongoDB en un comando',
+      '🌐 Modo producción: sirve frontend compilado desde Express con fallback SPA',
+      '📄 Colección .http con todos los endpoints para REST Client en VS Code'
+    ]
+  },
+  sistemas:{
+    name:'Proyectos de Sistemas — Bajo Nivel',
+    cat:'cat-uni',catLabel:'Universidad — Java · Python · Ensamblador',
+    desc:'Colección de cuatro proyectos que exploran el funcionamiento interno de los sistemas computacionales desde lo más bajo hasta álgebra numérica — cada uno implementando algoritmos reales desde cero.',
+    stack:['Java','Threads','Semaphore','Python','NumPy','Ensamblador x86','Gson'],
+    features:[
+      '🖥️ Simulador de planificación de CPU (SO I): 5 algoritmos reales (FCFS, SJF, SRT, Round Robin, HRRN) con hilos Java y semáforos — preemption real en SRT',
+      '💾 Simulador de sistema de archivos (SO II): árbol jerárquico recursivo + bloques encadenados + persistencia JSON con TypeAdapters custom para estructuras propias',
+      '🧮 Solucionador de sistemas lineales (Álgebra): PALU con pivoteo parcial manual, Jacobi con detección de dominancia diagonal, Gauss-Jordan con pivoteo completo',
+      '🔐 Descifrador de criptogramas en Ensamblador x86 (Org. del Computador)'
+    ],
+    subprojects:[
+      {name:'ProyectoSO',repo:'https://github.com/GianfrancoMongiell0/ProyectoSO'},
+      {name:'SimuladorVirtualSO',repo:'https://github.com/GianfrancoMongiell0/SimuladorVirtualSO'},
+      {name:'Proyecto-Algebra',repo:'https://github.com/GianfrancoMongiell0/Proyecto-Algebra'}
+    ]
+  }
 };
 
 function openModal(key){
   const p=PROJECTS[key];if(!p)return;
+  const links=[];
+  if(p.url) links.push(`<a href="${p.url}" target="_blank" style="font-family:var(--mono);font-size:.72rem;color:#05080f;background:var(--a1);padding:.35rem .9rem;border-radius:3px;text-decoration:none;font-weight:700;letter-spacing:.08em">🌐 VER EN VIVO</a>`);
+  if(p.repo) links.push(`<a href="${p.repo}" target="_blank" style="font-family:var(--mono);font-size:.72rem;color:var(--a1);border:1px solid var(--a1);padding:.35rem .9rem;border-radius:3px;text-decoration:none;font-weight:700;letter-spacing:.08em">🐙 VER REPO</a>`);
+
+  const subprojectsHtml = p.subprojects ? `
+    <div style="margin-top:1.2rem;padding-top:1rem;border-top:1px solid var(--border)">
+      <div style="font-family:var(--mono);font-size:.62rem;color:var(--t3);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.6rem">Repositorios</div>
+      <div style="display:flex;flex-wrap:wrap;gap:.5rem">
+        ${p.subprojects.map(s=>`<a href="${s.repo}" target="_blank" style="font-family:var(--mono);font-size:.68rem;color:var(--a2);border:1px solid rgba(124,58,237,.3);padding:.25rem .65rem;border-radius:3px;text-decoration:none;transition:all .2s">🐙 ${s.name}</a>`).join('')}
+      </div>
+    </div>` : '';
+
+  const highlightHtml = p.highlight ? `
+    <div style="background:rgba(0,229,200,.06);border:1px solid rgba(0,229,200,.2);border-radius:4px;padding:.9rem 1rem;margin:1rem 0;font-size:.83rem;color:var(--t1);line-height:1.65">
+      <span style="color:var(--a1);font-family:var(--mono);font-size:.65rem;letter-spacing:.1em;display:block;margin-bottom:.3rem">💡 DETALLE TÉCNICO</span>
+      ${p.highlight}
+    </div>` : '';
+
   document.getElementById('modal-content').innerHTML=`
     <div class="p-cat ${p.cat}" style="margin-bottom:.8rem">${p.catLabel}</div>
-    <div class="modal-title">${p.name}</div>
+    <div class="modal-title" style="margin-bottom:.8rem">${p.name}</div>
+    ${links.length?`<div style="display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:1.1rem">${links.join('')}</div>`:''}
     <div class="modal-desc">${p.desc}</div>
-    <div class="modal-stack">${p.stack.map(s=>`<span class="p-badge">${s}</span>`).join('')}</div>
+    ${highlightHtml}
+    <div style="font-family:var(--mono);font-size:.62rem;color:var(--t3);letter-spacing:.1em;text-transform:uppercase;margin:.9rem 0 .5rem">Stack</div>
+    <div class="modal-stack" style="margin-bottom:1rem">${p.stack.map(s=>`<span class="p-badge">${s}</span>`).join('')}</div>
+    <div style="font-family:var(--mono);font-size:.62rem;color:var(--t3);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.5rem">Features</div>
     <div>${p.features.map(f=>`<div class="modal-feature">${f}</div>`).join('')}</div>
+    ${subprojectsHtml}
   `;
   document.getElementById('modal').classList.add('open');
   document.body.style.overflow='hidden';
