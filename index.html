@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gianfranco Mongiello — SAP ABAP Developer</title>
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%2300e5c8'/><text x='50%25' y='72%25' text-anchor='middle' font-family='Inter,sans-serif' font-weight='700' font-size='16' fill='%2305080f'>GM</text></svg>">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -14,7 +16,7 @@
   <div id="cursor-ring"></div>
   <div id="scroll-bar"></div>
   <canvas id="matrix-canvas"></canvas>
-  <button id="matrix-btn" title="Easter egg 🐣">&lt;/&gt;</button>
+  <button id="matrix-btn" title="Easter egg">&lt;/&gt;</button>
 
   <div class="modal-overlay" id="modal">
     <div class="modal">
@@ -25,7 +27,6 @@
 
   <canvas id="bg-canvas"></canvas>
 
-  <!-- NAV -->
   <nav>
     <div class="nav-logo">
       <span style="color:var(--t3)">~/</span><span id="nav-path">home</span><span style="color:var(--t3)">$</span><span
@@ -46,7 +47,6 @@
     </div>
   </nav>
 
-  <!-- HERO -->
   <section id="hero">
     <div class="hero-pre">SAP ABAP Developer · Systems Engineer · Venezuela 🇻🇪</div>
     <h1 class="hero-name">
@@ -99,7 +99,6 @@
     </div>
   </section>
 
-  <!-- ABOUT -->
   <section id="about">
     <div class="wrap">
       <div class="s-label">about.me</div>
@@ -151,16 +150,118 @@
     </div>
   </section>
 
-  <!-- SKILLS -->
   <section id="skills">
     <div class="wrap">
       <div class="s-label">skills.json</div>
       <h2 class="s-title">Stack técnico.</h2>
       <div class="skills-grid" id="skills-grid">
+
         <div class="sk-card" data-lvl="82" data-fill="fc">
           <div class="sk-top">
-            <div class="sk-ico"><svg width="800px" height="800px" viewBox="0 0 32 32"
+            <div class="sk-ico"><svg fill="currentColor" width="22" height="22" viewBox="0 0 32 32"
                 xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M0 8.083v15.835h16.172l15.828-15.835zM4.355 11.031h0.005c1.151 0 2.552 0.324 3.567 0.844l-1.093 1.907c-1.115-0.541-1.672-0.588-2.307-0.625-0.943-0.052-1.417 0.287-1.428 0.651-0.005 0.444 0.896 0.844 1.745 1.12 1.281 0.407 2.916 0.953 3.167 2.532l2.349-6.208h2.728l2.751 7.432-0.011-7.432h3.161c3.011 0 4.427 1.020 4.427 3.359 0 2.099-1.452 3.355-3.916 3.355h-1.016l-0.015 2.791-4.781-0.005-0.333-1.213c-0.495 0.167-1.052 0.256-1.641 0.256-0.609 0-1.183-0.095-1.687-0.265l-0.475 1.223-2.667 0.005 0.12-0.615c-0.041 0.037-0.079 0.068-0.12 0.1-0.708 0.572-1.609 0.839-2.713 0.859h-0.287c-1.203 0.016-2.391-0.296-3.437-0.896l0.973-1.932c1.052 0.625 1.715 0.76 2.605 0.745 0.463-0.011 0.796-0.095 1.015-0.319 0.131-0.135 0.204-0.307 0.209-0.495 0.009-0.5-0.709-0.733-1.579-1.005-0.708-0.219-1.516-0.52-2.141-0.984-0.744-0.541-1.104-1.229-1.083-2.197 0.005-0.688 0.276-1.344 0.755-1.833 0.693-0.719 1.808-1.152 3.152-1.152zM18.479 13.255v2.543h0.699c0.921 0 1.661-0.308 1.661-1.287 0-0.948-0.74-1.256-1.661-1.256zM11.697 14.281l-0.995 3.145c0.297 0.115 0.641 0.177 1.005 0.177 0.36 0 0.699-0.063 0.989-0.167l-0.979-3.161z" />
+              </svg></div>
+            <div>
+              <div class="sk-name">SAP ABAP</div>
+              <div class="sk-cat">ENTERPRISE · ERP</div>
+            </div>
+          </div>
+          <div class="sk-desc">Reports ALV, SmartForms, Adobe Forms, RFCs, BAPIs e interfaces. FI, MM, SD, CO y HR en
+            entornos productivos reales en C2S.</div>
+          <div class="sk-bar">
+            <div class="sk-fill fc"></div>
+          </div>
+        </div>
+
+        <div class="sk-card" data-lvl="75" data-fill="fc">
+          <div class="sk-top">
+            <div class="sk-ico"><svg width="22" height="22" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="12,3 20,7.5 20,16.5 12,21 4,16.5 4,7.5" stroke="currentColor" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                <polyline points="14,9 10,13 13,13 10,18" stroke="currentColor" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round" fill="none" />
+              </svg></div>
+            <div>
+              <div class="sk-name">SAP Build</div>
+              <div class="sk-cat">LOW-CODE · CERTIFICADO</div>
+            </div>
+          </div>
+          <div class="sk-desc">Certificación SAP Build Associate. Apps low-code y automatización de procesos con SAP
+            Build Process Automation.</div>
+          <div class="sk-bar">
+            <div class="sk-fill fc"></div>
+          </div>
+        </div>
+
+        <div class="sk-card" data-lvl="78" data-fill="fo">
+          <div class="sk-top">
+            <div class="sk-ico"><svg width="22" height="22" viewBox="0 0 32 32" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M18.6789 15.9759C18.6789 14.5415 17.4796 13.3785 16 13.3785C14.5206 13.3785 13.3211 14.5415 13.3211 15.9759C13.3211 17.4105 14.5206 18.5734 16 18.5734C17.4796 18.5734 18.6789 17.4105 18.6789 15.9759Z"
+                  fill="currentColor" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M24.7004 11.1537C25.2661 8.92478 25.9772 4.79148 23.4704 3.39016C20.9753 1.99495 17.7284 4.66843 16.0139 6.27318C14.3044 4.68442 10.9663 2.02237 8.46163 3.42814C5.96751 4.82803 6.73664 8.8928 7.3149 11.1357C4.98831 11.7764 1 13.1564 1 15.9759C1 18.7874 4.98416 20.2888 7.29698 20.9289C6.71658 23.1842 5.98596 27.1909 8.48327 28.5877C10.9973 29.9932 14.325 27.3945 16.0554 25.7722C17.7809 27.3864 20.9966 30.0021 23.4922 28.6014C25.9956 27.1963 25.3436 23.1184 24.7653 20.8625C27.0073 20.221 31 18.7523 31 15.9759C31 13.1835 26.9903 11.7923 24.7004 11.1537ZM24.4162 19.667C24.0365 18.5016 23.524 17.2623 22.8971 15.9821C23.4955 14.7321 23.9881 13.5088 24.3572 12.3509C26.0359 12.8228 29.7185 13.9013 29.7185 15.9759C29.7185 18.07 26.1846 19.1587 24.4162 19.667ZM22.85 27.526C20.988 28.571 18.2221 26.0696 16.9478 24.8809C17.7932 23.9844 18.638 22.9422 19.4625 21.7849C20.9129 21.6602 22.283 21.4562 23.5256 21.1777C23.9326 22.7734 24.7202 26.4763 22.85 27.526ZM9.12362 27.5111C7.26143 26.47 8.11258 22.8946 8.53957 21.2333C9.76834 21.4969 11.1286 21.6865 12.5824 21.8008C13.4123 22.9332 14.2816 23.9741 15.1576 24.8857C14.0753 25.9008 10.9945 28.557 9.12362 27.5111ZM2.28149 15.9759C2.28149 13.874 5.94207 12.8033 7.65904 12.3326C8.03451 13.5165 8.52695 14.7544 9.12123 16.0062C8.51925 17.2766 8.01977 18.5341 7.64085 19.732C6.00369 19.2776 2.28149 18.0791 2.28149 15.9759ZM9.1037 4.50354C10.9735 3.45416 13.8747 6.00983 15.1159 7.16013C14.2444 8.06754 13.3831 9.1006 12.5603 10.2265C11.1494 10.3533 9.79875 10.5569 8.55709 10.8297C8.09125 9.02071 7.23592 5.55179 9.1037 4.50354ZM20.3793 11.5771C21.3365 11.6942 22.2536 11.85 23.1147 12.0406C22.8562 12.844 22.534 13.6841 22.1545 14.5453C21.6044 13.5333 21.0139 12.5416 20.3793 11.5771ZM16.0143 8.0481C16.6054 8.66897 17.1974 9.3623 17.7798 10.1145C16.5985 10.0603 15.4153 10.0601 14.234 10.1137C14.8169 9.36848 15.414 8.67618 16.0143 8.0481ZM9.8565 14.5444C9.48329 13.6862 9.16398 12.8424 8.90322 12.0275C9.75918 11.8418 10.672 11.69 11.623 11.5748C10.9866 12.5372 10.3971 13.5285 9.8565 14.5444ZM11.6503 20.4657C10.6679 20.3594 9.74126 20.2153 8.88556 20.0347C9.15044 19.2055 9.47678 18.3435 9.85796 17.4668C10.406 18.4933 11.0045 19.4942 11.6503 20.4657ZM16.0498 23.9915C15.4424 23.356 14.8365 22.6531 14.2448 21.8971C15.4328 21.9423 16.6231 21.9424 17.811 21.891C17.2268 22.6608 16.6369 23.3647 16.0498 23.9915ZM22.1667 17.4222C22.5677 18.3084 22.9057 19.1657 23.1742 19.9809C22.3043 20.1734 21.3652 20.3284 20.3757 20.4435C21.015 19.4607 21.6149 18.4536 22.1667 17.4222ZM18.7473 20.5941C16.9301 20.72 15.1016 20.7186 13.2838 20.6044C12.2509 19.1415 11.3314 17.603 10.5377 16.0058C11.3276 14.4119 12.2404 12.8764 13.2684 11.4158C15.0875 11.2825 16.9178 11.2821 18.7369 11.4166C19.7561 12.8771 20.6675 14.4086 21.4757 15.9881C20.6771 17.5812 19.7595 19.1198 18.7473 20.5941ZM22.8303 4.4666C24.7006 5.51254 23.8681 9.22726 23.4595 10.8426C22.2149 10.5641 20.8633 10.3569 19.4483 10.2281C18.6239 9.09004 17.7698 8.05518 16.9124 7.15949C18.1695 5.98441 20.9781 3.43089 22.8303 4.4666Z"
+                  fill="currentColor" />
+              </svg></div>
+            <div>
+              <div class="sk-name">React</div>
+              <div class="sk-cat">FRONTEND · UI</div>
+            </div>
+          </div>
+          <div class="sk-desc">SPAs, hooks, consumo de APIs. App de quiniela para el Mundial 2026 en C2S con Supabase
+            Realtime.</div>
+          <div class="sk-bar">
+            <div class="sk-fill fo"></div>
+          </div>
+        </div>
+
+        <div class="sk-card" data-lvl="74" data-fill="fv">
+          <div class="sk-top">
+            <div class="sk-ico"><svg width="22" height="22" viewBox="0 0 32 32" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M16.0497 8.44062C22.6378 3.32607 19.2566 0 19.2566 0C19.7598 5.28738 13.813 6.53583 12.2189 10.1692C11.1312 12.6485 12.9638 14.8193 16.0475 17.5554C15.7749 16.9494 15.3544 16.3606 14.9288 15.7645C13.4769 13.7313 11.9645 11.6132 16.0497 8.44062Z"
+                  fill="currentColor" />
+                <path
+                  d="M17.1015 18.677C17.1015 18.677 19.0835 17.0779 17.5139 15.3008C12.1931 9.27186 23.3333 6.53583 23.3333 6.53583C16.5317 9.8125 17.5471 11.7574 19.2567 14.1202C21.0871 16.6538 17.1015 18.677 17.1015 18.677Z"
+                  fill="currentColor" />
+                <path
+                  d="M22.937 23.4456C29.0423 20.3258 26.2195 17.3278 24.2492 17.7317C23.7662 17.8305 23.5509 17.9162 23.5509 17.9162C23.5509 17.9162 23.7302 17.64 24.0726 17.5204C27.9705 16.1729 30.9682 21.4949 22.8143 23.6028C22.8143 23.6029 22.9088 23.5198 22.937 23.4456Z"
+                  fill="currentColor" />
+                <path
+                  d="M10.233 19.4969C6.41312 18.9953 12.3275 17.6139 12.3275 17.6139C12.3275 17.6139 10.0307 17.4616 7.20592 18.8043C3.86577 20.3932 15.4681 21.1158 21.474 19.5625C22.0984 19.1432 22.9614 18.7798 22.9614 18.7798C22.9614 18.7798 20.5037 19.2114 18.0561 19.4145C15.0612 19.6612 11.8459 19.7093 10.233 19.4969Z"
+                  fill="currentColor" />
+                <path
+                  d="M11.6864 22.4758C9.55624 22.2592 10.951 21.2439 10.951 21.2439C5.43898 23.0429 14.0178 25.083 21.7199 22.8682C20.9012 22.5844 20.3806 22.0653 20.3806 22.0653C16.6163 22.7781 14.441 22.7553 11.6864 22.4758Z"
+                  fill="currentColor" />
+                <path
+                  d="M12.6145 25.6991C10.486 25.4585 11.7295 24.7474 11.7295 24.7474C6.72594 26.1222 14.7729 28.9625 21.1433 26.2777C20.0999 25.8787 19.3528 25.4181 19.3528 25.4181C16.5111 25.9469 15.1931 25.9884 12.6145 25.6991Z"
+                  fill="currentColor" />
+                <path
+                  d="M25.9387 27.3388C25.9387 27.3388 26.8589 28.0844 24.9252 28.6612C21.2481 29.7566 9.62093 30.0874 6.39094 28.7049C5.22984 28.2082 7.40723 27.5189 8.09215 27.3742C8.80646 27.2219 9.21466 27.2503 9.21466 27.2503C7.9234 26.3558 0.868489 29.0067 5.63111 29.7659C18.6195 31.8372 29.3077 28.8331 25.9387 27.3388Z"
+                  fill="currentColor" />
+                <path
+                  d="M28 28.9679C27.7869 31.6947 18.7877 32.2683 12.9274 31.8994C9.10432 31.6583 8.33812 31.0558 8.32691 31.047C11.9859 31.6402 18.1549 31.7482 23.1568 30.8225C27.5903 30.0016 28 28.9679 28 28.9679Z"
+                  fill="currentColor" />
+              </svg></div>
+            <div>
+              <div class="sk-name">Java</div>
+              <div class="sk-cat">BACKEND · OOP</div>
+            </div>
+          </div>
+          <div class="sk-desc">OOP, hilos, simulación de memoria. Base sólida en Sistemas Operativos y Estructuras de
+            Datos en la UNIMET.</div>
+          <div class="sk-bar">
+            <div class="sk-fill fv"></div>
+          </div>
+        </div>
+
+        <div class="sk-card" data-lvl="70" data-fill="fo">
+          <div class="sk-top">
+            <div class="sk-ico"><svg width="22" height="22" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                 <polyline
                   points="15.383 18.316 18.744 15.042 27.093 15.042 19.697 22.438 15.383 18.316 15.383 18.316 15.383 18.316 15.383 18.316 15.383 18.316"
                   style="fill:#40d0fd" />
@@ -183,6 +284,7 @@
             <div class="sk-fill fo"></div>
           </div>
         </div>
+
         <div class="sk-card" data-lvl="68" data-fill="fv">
           <div class="sk-top">
             <div class="sk-ico"><svg width="22" height="22" viewBox="0 0 32 32" fill="none"
@@ -205,11 +307,11 @@
             <div class="sk-fill fv"></div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- GITHUB STATS -->
   <section id="github-stats">
     <div class="wrap">
       <div class="s-label">github.activity</div>
@@ -249,9 +351,7 @@
           </div>
           <a href="https://github.com/GianfrancoMongiell0" target="_blank"
             style="font-family:var(--mono);font-size:.72rem;color:var(--a1);text-decoration:none;display:flex;align-items:center;gap:.4rem"
-            onmouseover="this.style.gap='.7rem'" onmouseout="this.style.gap='.4rem'">
-            Ver perfil completo →
-          </a>
+            onmouseover="this.style.gap='.7rem'" onmouseout="this.style.gap='.4rem'">Ver perfil completo →</a>
         </div>
         <div class="gh-card reveal" style="padding:1.5rem;flex-direction:column;align-items:flex-start;gap:.8rem">
           <div
@@ -306,14 +406,12 @@
     </div>
   </section>
 
-  <!-- PROJECTS -->
   <section id="projects">
     <div class="wrap">
       <div class="s-label">projects[]</div>
       <h2 class="s-title">Cosas que<br>he construido.</h2>
       <div class="bento">
 
-        <!-- Quiniela — destacado, personal, en producción -->
         <div class="bc b7 acc-o reveal" onclick="openModal('quinela')">
           <div class="p-cat cat-per">Personal · En producción</div>
           <div class="p-num">PROYECTO DESTACADO</div>
@@ -322,42 +420,33 @@
             puntos automáticos vía trigger PostgreSQL y tabla en tiempo real con Supabase Realtime. En uso activo en
             C2S.</div>
           <div class="p-visual"><canvas id="chart-quinela" style="width:100%;padding:.8rem" height="110"></canvas></div>
-          <div class="p-badges">
-            <span class="p-badge">React 18</span><span class="p-badge">Supabase</span><span
-              class="p-badge">PostgreSQL</span><span class="p-badge">PWA</span><span class="p-badge">Vercel</span>
-          </div>
+          <div class="p-badges"><span class="p-badge">React 18</span><span class="p-badge">Supabase</span><span
+              class="p-badge">PostgreSQL</span><span class="p-badge">PWA</span><span class="p-badge">Vercel</span></div>
           <span class="p-link">Ver detalles →</span>
         </div>
 
-        <!-- FinVE — personal, Flutter -->
         <div class="bc b5 acc-v reveal" onclick="openModal('finanzas')">
           <div class="p-cat cat-per">Personal · Android</div>
           <div class="p-num">002</div>
           <div class="p-name">FinVE — Finanzas Multi-Divisa</div>
           <div class="p-desc">App Android offline-first para el contexto venezolano. Bolívares, dólares y crypto en una
             sola vista con biometría y SQLite local.</div>
-          <div class="p-badges">
-            <span class="p-badge">Flutter</span><span class="p-badge">Dart</span><span
-              class="p-badge">Riverpod</span><span class="p-badge">SQLite</span>
-          </div>
+          <div class="p-badges"><span class="p-badge">Flutter</span><span class="p-badge">Dart</span><span
+              class="p-badge">Riverpod</span><span class="p-badge">SQLite</span></div>
           <span class="p-link">Ver detalles →</span>
         </div>
 
-        <!-- Task Manager API -->
         <div class="bc b5 acc-c reveal" onclick="openModal('notas')">
           <div class="p-cat cat-uni">Universidad — Base de Datos</div>
           <div class="p-num">003</div>
           <div class="p-name">Task Manager API</div>
           <div class="p-desc">REST API Node.js + MongoDB con auth stateless cookies httpOnly JWT, validación Zod y
             arquitectura MVC. Docker Compose incluido.</div>
-          <div class="p-badges">
-            <span class="p-badge">Node.js</span><span class="p-badge">MongoDB</span><span
-              class="p-badge">JWT</span><span class="p-badge">Zod</span><span class="p-badge">Docker</span>
-          </div>
+          <div class="p-badges"><span class="p-badge">Node.js</span><span class="p-badge">MongoDB</span><span
+              class="p-badge">JWT</span><span class="p-badge">Zod</span><span class="p-badge">Docker</span></div>
           <span class="p-link">Ver detalles →</span>
         </div>
 
-        <!-- Proyectos de Sistemas — card ancha con radar -->
         <div class="bc b7 acc-v reveal" onclick="openModal('sistemas')"
           style="flex-direction:row;align-items:center;gap:2rem;flex-wrap:wrap">
           <div style="flex:1;min-width:200px">
@@ -366,28 +455,22 @@
             <div class="p-name">Proyectos de Sistemas</div>
             <div class="p-desc">Planificación de CPU con hilos y semáforos reales, sistema de archivos con persistencia
               JSON custom, métodos numéricos matriciales — todo implementado desde cero.</div>
-            <div class="p-badges" style="margin-top:.8rem">
-              <span class="p-badge">Java Threads</span><span class="p-badge">Semaphore</span><span
-                class="p-badge">Python</span><span class="p-badge">Gson</span>
+            <div class="p-badges" style="margin-top:.8rem"><span class="p-badge">Java Threads</span><span
+                class="p-badge">Semaphore</span><span class="p-badge">Python</span><span class="p-badge">Gson</span>
             </div>
             <span class="p-link" style="margin-top:.8rem">Ver detalles →</span>
           </div>
-          <div style="flex:1;min-width:200px">
-            <canvas id="chart-skills" height="150" style="width:100%"></canvas>
-          </div>
+          <div style="flex:1;min-width:200px"><canvas id="chart-skills" height="150" style="width:100%"></canvas></div>
         </div>
 
-        <!-- Playfair MIPS -->
         <div class="bc b5 acc-r reveal" onclick="openModal('sistemas')">
           <div class="p-cat cat-uni">Universidad — Org. del Computador</div>
           <div class="p-num">007</div>
           <div class="p-name">Cifrado Playfair — MIPS Assembly</div>
           <div class="p-desc">Cifrado Playfair completo en ensamblador MIPS. Construye la matriz 5×5, lee desde .txt y
             cifra por pares con los 3 casos del algoritmo y encriptación circular de bordes.</div>
-          <div class="p-badges">
-            <span class="p-badge">MIPS Assembly</span><span class="p-badge">MARS/SPIM</span><span
-              class="p-badge">Playfair</span>
-          </div>
+          <div class="p-badges"><span class="p-badge">MIPS Assembly</span><span class="p-badge">MARS/SPIM</span><span
+              class="p-badge">Playfair</span></div>
           <span class="p-link">Ver detalles →</span>
         </div>
 
@@ -395,7 +478,6 @@
     </div>
   </section>
 
-  <!-- CERTS -->
   <section id="certs">
     <div class="wrap">
       <div class="s-label">certifications[]</div>
@@ -449,7 +531,6 @@
     </div>
   </section>
 
-  <!-- LANGUAGES -->
   <section id="languages">
     <div class="wrap">
       <div class="s-label">languages[]</div>
@@ -487,7 +568,6 @@
     </div>
   </section>
 
-  <!-- EXPERIENCE -->
   <section id="experience">
     <div class="wrap">
       <div class="s-label">experience.log</div>
@@ -511,7 +591,6 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
   <section id="contact">
     <div class="wrap">
       <div class="s-label">contact.sh</div>
@@ -524,7 +603,6 @@
             <a href="mailto:gianfrancomongielloflores@gmail.com" class="c-link">
               <div class="c-ico"><svg fill="currentColor" width="22" height="22" viewBox="0 0 24 24" role="img"
                   xmlns="http://www.w3.org/2000/svg">
-                  <title>Gmail icon</title>
                   <path
                     d="M24 4.5v15c0 .85-.65 1.5-1.5 1.5H21V7.387l-9 6.463-9-6.463V21H1.5C.649 21 0 20.35 0 19.5v-15c0-.425.162-.8.431-1.068C.7 3.16 1.076 3 1.5 3H2l10 7.25L22 3h.5c.425 0 .8.162 1.069.432.27.268.431.643.431 1.068z" />
                 </svg></div>gianfrancomongielloflores@gmail.com
@@ -549,7 +627,6 @@
             <a href="https://github.com/GianfrancoMongiell0" target="_blank" class="c-link">
               <div class="c-ico"><svg width="22" height="22" viewBox="0 0 20 20" version="1.1"
                   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                  <title>github [#142]</title>
                   <desc>Created with Sketch.</desc>
                   <defs></defs>
                   <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -605,7 +682,6 @@
       <a href="https://github.com/GianfrancoMongiell0" target="_blank" class="sf-link"><svg width="22" height="22"
           viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink">
-          <title>github [#142]</title>
           <desc>Created with Sketch.</desc>
           <defs></defs>
           <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -653,7 +729,6 @@
         </svg></a>
       <a href="mailto:gianfrancomongielloflores@gmail.com" class="sf-link"><svg fill="currentColor" width="22"
           height="22" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg">
-          <title>Gmail icon</title>
           <path
             d="M24 4.5v15c0 .85-.65 1.5-1.5 1.5H21V7.387l-9 6.463-9-6.463V21H1.5C.649 21 0 20.35 0 19.5v-15c0-.425.162-.8.431-1.068C.7 3.16 1.076 3 1.5 3H2l10 7.25L22 3h.5c.425 0 .8.162 1.069.432.27.268.431.643.431 1.068z" />
         </svg></a>
