@@ -198,19 +198,21 @@ const PROJECTS={
   },
   sistemas:{
     name:'Proyectos de Sistemas — Bajo Nivel',
-    cat:'cat-uni',catLabel:'Universidad — Java · Python · Ensamblador',
-    desc:'Colección de cuatro proyectos que exploran el funcionamiento interno de los sistemas computacionales desde lo más bajo hasta álgebra numérica — cada uno implementando algoritmos reales desde cero.',
-    stack:['Java','Threads','Semaphore','Python','NumPy','Ensamblador x86','Gson'],
+    cat:'cat-uni',catLabel:'Universidad — Java · Python · MIPS Assembly',
+    desc:'Cuatro proyectos que bajan hasta el metal: planificación de CPU con hilos reales, sistema de archivos con bloques encadenados, métodos numéricos matriciales y cifrado Playfair en MIPS Assembly — cada uno implementando algoritmos desde cero sin librerías externas.',
+    highlight:'El cifrado Playfair en MIPS maneja los 3 casos del algoritmo (misma fila, misma columna, diagonal) con encriptación circular de bordes, lectura de archivo .txt y casos especiales de letras repetidas — todo en lenguaje ensamblador puro.',
+    stack:['Java','Threads','Semaphore','Gson','Python','NumPy','MIPS Assembly'],
     features:[
-      '🖥️ Simulador de planificación de CPU (SO I): 5 algoritmos reales (FCFS, SJF, SRT, Round Robin, HRRN) con hilos Java y semáforos — preemption real en SRT',
-      '💾 Simulador de sistema de archivos (SO II): árbol jerárquico recursivo + bloques encadenados + persistencia JSON con TypeAdapters custom para estructuras propias',
-      '🧮 Solucionador de sistemas lineales (Álgebra): PALU con pivoteo parcial manual, Jacobi con detección de dominancia diagonal, Gauss-Jordan con pivoteo completo',
-      '🔐 Descifrador de criptogramas en Ensamblador x86 (Org. del Computador)'
+      '🖥️ Simulador de planificación de CPU (SO I) — 5 algoritmos: FCFS, SJF, SRT con preemption real vía Semaphore, Round Robin con quantum y HRRN con cálculo de response ratio. Cada CPU es un Thread Java independiente.',
+      '💾 Simulador de sistema de archivos (SO II) — árbol jerárquico recursivo, bloques de memoria encadenados, persistencia JSON con TypeAdapters custom para estructuras propias y logger de auditoría por usuario.',
+      '🧮 Solucionador de sistemas lineales (Álgebra Lineal) — PALU con pivoteo parcial manual, Jacobi con detección de dominancia diagonal y reordenamiento heurístico, Gauss-Jordan con pivoteo completo tracking de permutaciones de columnas.',
+      '🔐 Cifrado Playfair en MIPS Assembly (Org. del Computador) — construye matriz 5×5 desde clave, lee texto desde .txt, cifra por pares manejando misma fila / misma columna / diagonal con encriptación circular de bordes.'
     ],
     subprojects:[
       {name:'ProyectoSO',repo:'https://github.com/GianfrancoMongiell0/ProyectoSO'},
       {name:'SimuladorVirtualSO',repo:'https://github.com/GianfrancoMongiell0/SimuladorVirtualSO'},
-      {name:'Proyecto-Algebra',repo:'https://github.com/GianfrancoMongiell0/Proyecto-Algebra'}
+      {name:'Proyecto-Algebra',repo:'https://github.com/GianfrancoMongiell0/Proyecto-Algebra'},
+      {name:'Playfair-MIPS',repo:'https://github.com/GianfrancoMongiell0/Playfair-MIPS'}
     ]
   }
 };
