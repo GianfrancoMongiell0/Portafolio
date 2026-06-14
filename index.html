@@ -5,21 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gianfranco Mongiello — SAP ABAP Developer</title>
 <link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%2305080f'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Inter,sans-serif' font-weight='700' font-size='13' fill='%2300e5c8'>GM</text></svg>">
 </head>
 <body>
 
-<!-- CURSOR -->
 <div id="cursor"></div>
 <div id="cursor-ring"></div>
-
-<!-- SCROLL BAR -->
 <div id="scroll-bar"></div>
-
-<!-- MATRIX CANVAS -->
 <canvas id="matrix-canvas"></canvas>
 <button id="matrix-btn" title="Easter egg 🐣">&lt;/&gt;</button>
 
-<!-- MODAL -->
 <div class="modal-overlay" id="modal">
   <div class="modal">
     <button class="modal-close" onclick="closeModal()">✕ cerrar</button>
@@ -118,18 +113,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="ck">return</span> <span class="cn">True</span> <span class="cc"># siempre</span>
         </div>
         <div class="stats-row">
-          <div class="stat">
-            <div class="stat-n" data-target="8">0<em>m</em></div>
-            <div class="stat-l">Exp. SAP</div>
-          </div>
-          <div class="stat">
-            <div class="stat-n" data-target="5">0</div>
-            <div class="stat-l">Módulos</div>
-          </div>
-          <div class="stat">
-            <div class="stat-n" data-target="10">0<em>+</em></div>
-            <div class="stat-l">Proyectos</div>
-          </div>
+          <div class="stat"><div class="stat-n" data-target="8">0<em>m</em></div><div class="stat-l">Exp. SAP</div></div>
+          <div class="stat"><div class="stat-n" data-target="5">0</div><div class="stat-l">Módulos</div></div>
+          <div class="stat"><div class="stat-n" data-target="10">0<em>+</em></div><div class="stat-l">Proyectos</div></div>
         </div>
       </div>
     </div>
@@ -184,7 +170,7 @@
     <div class="gh-grid">
       <div class="gh-card reveal" style="padding:1.5rem;flex-direction:column;align-items:flex-start;gap:.8rem">
         <div style="font-family:var(--mono);font-size:.62rem;color:var(--t3);letter-spacing:.1em;text-transform:uppercase">Stats generales</div>
-        <div id="gh-manual-stats" style="width:100%">
+        <div style="width:100%">
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:.8rem">
             <div style="background:var(--bg3);border:1px solid var(--border);border-radius:4px;padding:.9rem">
               <div style="font-size:1.4rem;font-weight:600;color:var(--white)" id="gh-repos">...</div>
@@ -205,24 +191,24 @@
           </div>
         </div>
         <a href="https://github.com/GianfrancoMongiell0" target="_blank"
-           style="font-family:var(--mono);font-size:.72rem;color:var(--a1);text-decoration:none;display:flex;align-items:center;gap:.4rem;transition:gap .2s"
+           style="font-family:var(--mono);font-size:.72rem;color:var(--a1);text-decoration:none;display:flex;align-items:center;gap:.4rem"
            onmouseover="this.style.gap='.7rem'" onmouseout="this.style.gap='.4rem'">
           Ver perfil completo →
         </a>
       </div>
       <div class="gh-card reveal" style="padding:1.5rem;flex-direction:column;align-items:flex-start;gap:.8rem">
         <div style="font-family:var(--mono);font-size:.62rem;color:var(--t3);letter-spacing:.1em;text-transform:uppercase">Lenguajes en repos públicos</div>
-        <div style="display:flex;flex-direction:column;gap:.5rem;width:100%" id="gh-langs-bars">
-          <div style="display:flex;align-items:center;gap:.7rem"><span style="font-family:var(--mono);font-size:.7rem;color:var(--a3);min-width:90px">JavaScript</span><div style="flex:1;height:3px;background:var(--border);border-radius:2px"><div style="width:70%;height:100%;background:var(--a3);border-radius:2px;transition:width 1s ease" class="gh-bar"></div></div><span style="font-family:var(--mono);font-size:.65rem;color:var(--t3)">70%</span></div>
-          <div style="display:flex;align-items:center;gap:.7rem"><span style="font-family:var(--mono);font-size:.7rem;color:var(--a4);min-width:90px">Java</span><div style="flex:1;height:3px;background:var(--border);border-radius:2px"><div style="width:15%;height:100%;background:var(--a4);border-radius:2px;transition:width 1s ease" class="gh-bar"></div></div><span style="font-family:var(--mono);font-size:.65rem;color:var(--t3)">15%</span></div>
-          <div style="display:flex;align-items:center;gap:.7rem"><span style="font-family:var(--mono);font-size:.7rem;color:var(--a2);min-width:90px">Dart</span><div style="flex:1;height:3px;background:var(--border);border-radius:2px"><div style="width:8%;height:100%;background:var(--a2);border-radius:2px;transition:width 1s ease" class="gh-bar"></div></div><span style="font-family:var(--mono);font-size:.65rem;color:var(--t3)">8%</span></div>
-          <div style="display:flex;align-items:center;gap:.7rem"><span style="font-family:var(--mono);font-size:.7rem;color:var(--a1);min-width:90px">TypeScript</span><div style="flex:1;height:3px;background:var(--border);border-radius:2px"><div style="width:7%;height:100%;background:var(--a1);border-radius:2px;transition:width 1s ease" class="gh-bar"></div></div><span style="font-family:var(--mono);font-size:.65rem;color:var(--t3)">7%</span></div>
+        <div style="display:flex;flex-direction:column;gap:.5rem;width:100%">
+          <div style="display:flex;align-items:center;gap:.7rem"><span style="font-family:var(--mono);font-size:.7rem;color:var(--a3);min-width:90px">JavaScript</span><div style="flex:1;height:3px;background:var(--border);border-radius:2px"><div style="width:70%;height:100%;background:var(--a3);border-radius:2px;transition:width 1s ease"></div></div><span style="font-family:var(--mono);font-size:.65rem;color:var(--t3)">70%</span></div>
+          <div style="display:flex;align-items:center;gap:.7rem"><span style="font-family:var(--mono);font-size:.7rem;color:var(--a4);min-width:90px">Java</span><div style="flex:1;height:3px;background:var(--border);border-radius:2px"><div style="width:15%;height:100%;background:var(--a4);border-radius:2px;transition:width 1s ease"></div></div><span style="font-family:var(--mono);font-size:.65rem;color:var(--t3)">15%</span></div>
+          <div style="display:flex;align-items:center;gap:.7rem"><span style="font-family:var(--mono);font-size:.7rem;color:var(--a2);min-width:90px">Dart</span><div style="flex:1;height:3px;background:var(--border);border-radius:2px"><div style="width:8%;height:100%;background:var(--a2);border-radius:2px;transition:width 1s ease"></div></div><span style="font-family:var(--mono);font-size:.65rem;color:var(--t3)">8%</span></div>
+          <div style="display:flex;align-items:center;gap:.7rem"><span style="font-family:var(--mono);font-size:.7rem;color:var(--a1);min-width:90px">TypeScript</span><div style="flex:1;height:3px;background:var(--border);border-radius:2px"><div style="width:7%;height:100%;background:var(--a1);border-radius:2px;transition:width 1s ease"></div></div><span style="font-family:var(--mono);font-size:.65rem;color:var(--t3)">7%</span></div>
         </div>
         <div style="font-family:var(--mono);font-size:.6rem;color:var(--t3);margin-top:.3rem">* Basado en repos públicos actuales</div>
       </div>
       <div class="gh-card gh-card-full reveal" style="padding:1.6rem;flex-direction:column;gap:1rem">
         <div style="font-family:var(--mono);font-size:.62rem;color:var(--t3);letter-spacing:.1em;text-transform:uppercase">Actividad — últimas 26 semanas</div>
-        <div id="heatmap" style="display:flex;gap:3px;flex-wrap:nowrap;overflow-x:auto;padding-bottom:.3rem"></div>
+        <div id="heatmap"></div>
         <div style="display:flex;align-items:center;gap:.5rem;margin-top:.2rem">
           <span style="font-family:var(--mono);font-size:.6rem;color:var(--t3)">Menos</span>
           <div style="width:10px;height:10px;border-radius:2px;background:var(--border)"></div>
@@ -243,67 +229,70 @@
     <h2 class="s-title">Cosas que<br>he construido.</h2>
     <div class="bento">
 
+      <!-- Quiniela — destacado, personal, en producción -->
       <div class="bc b7 acc-o reveal" onclick="openModal('quinela')">
-        <div class="p-cat cat-per">Personal · Click para ver más</div>
+        <div class="p-cat cat-per">Personal · En producción</div>
         <div class="p-num">PROYECTO DESTACADO</div>
         <div class="p-name">Quiniela Mundial 2026 ⚽</div>
-        <div class="p-desc">App React para gestionar pronósticos del Mundial 2026. La armé para mis compañeros de C2S. Puntos, tabla de posiciones en tiempo real y rondas automáticas.</div>
+        <div class="p-desc">SPA + PWA para pronosticar los 104 partidos del FIFA World Cup 2026. Ligas privadas, puntos automáticos vía trigger PostgreSQL y tabla en tiempo real con Supabase Realtime. En uso activo en C2S.</div>
         <div class="p-visual"><canvas id="chart-quinela" style="width:100%;padding:.8rem" height="110"></canvas></div>
-        <div class="p-badges"><span class="p-badge">React</span><span class="p-badge">JavaScript</span><span class="p-badge">CSS</span></div>
+        <div class="p-badges">
+          <span class="p-badge">React 18</span><span class="p-badge">Supabase</span><span class="p-badge">PostgreSQL</span><span class="p-badge">PWA</span><span class="p-badge">Vercel</span>
+        </div>
         <span class="p-link">Ver detalles →</span>
       </div>
 
+      <!-- FinVE — personal, Flutter -->
       <div class="bc b5 acc-v reveal" onclick="openModal('finanzas')">
-        <div class="p-cat cat-per">Personal · Click para ver más</div>
+        <div class="p-cat cat-per">Personal · Android</div>
         <div class="p-num">002</div>
-        <div class="p-name">App Finanzas Multi-Divisa 💱</div>
-        <div class="p-desc">Flutter app que unifica bolívares, dólares y criptomonedas. Hecha para resolver la realidad financiera venezolana.</div>
-        <div class="p-badges"><span class="p-badge">Flutter</span><span class="p-badge">Dart</span><span class="p-badge">APIs</span></div>
+        <div class="p-name">FinVE — Finanzas Multi-Divisa 💱</div>
+        <div class="p-desc">App Android offline-first para el contexto venezolano. Bolívares, dólares y crypto en una sola vista con biometría y SQLite local.</div>
+        <div class="p-badges">
+          <span class="p-badge">Flutter</span><span class="p-badge">Dart</span><span class="p-badge">Riverpod</span><span class="p-badge">SQLite</span>
+        </div>
         <span class="p-link">Ver detalles →</span>
       </div>
 
-      <div class="bc b4 acc-c reveal" onclick="openModal('agrupaciones')">
-        <div class="p-cat cat-uni">Universidad</div>
+      <!-- Task Manager API -->
+      <div class="bc b5 acc-c reveal" onclick="openModal('notas')">
+        <div class="p-cat cat-uni">Universidad — Base de Datos</div>
         <div class="p-num">003</div>
-        <div class="p-name">Agrupaciones Universitarias</div>
-        <div class="p-desc">Web React para gestionar agrupaciones estudiantiles UNIMET. Proyecto grupal de Sistemas de Información.</div>
-        <div class="p-badges"><span class="p-badge">React</span><span class="p-badge">JavaScript</span></div>
+        <div class="p-name">Task Manager API</div>
+        <div class="p-desc">REST API Node.js + MongoDB con auth stateless cookies httpOnly JWT, validación Zod y arquitectura MVC. Docker Compose incluido.</div>
+        <div class="p-badges">
+          <span class="p-badge">Node.js</span><span class="p-badge">MongoDB</span><span class="p-badge">JWT</span><span class="p-badge">Zod</span><span class="p-badge">Docker</span>
+        </div>
         <span class="p-link">Ver detalles →</span>
       </div>
 
-      <div class="bc b4 acc-v reveal" onclick="openModal('condominio')">
-        <div class="p-cat cat-uni">Universidad</div>
-        <div class="p-num">004</div>
-        <div class="p-name">Gestor de Condominios Web</div>
-        <div class="p-desc">Sistema Angular para administración de condominios. CRUD, gestión de residentes y pagos. Ing. de Software.</div>
-        <div class="p-badges"><span class="p-badge">Angular</span><span class="p-badge">TypeScript</span></div>
-        <span class="p-link">Ver detalles →</span>
-      </div>
-
-      <div class="bc b4 acc-r reveal" onclick="openModal('notas')">
-        <div class="p-cat cat-uni">Universidad</div>
-        <div class="p-num">005</div>
-        <div class="p-name">Bloc de Notas React + MongoDB</div>
-        <div class="p-desc">App de recordatorios fullstack con persistencia MongoDB. Proyecto de Base de Datos UNIMET.</div>
-        <div class="p-badges"><span class="p-badge">React</span><span class="p-badge">MongoDB</span><span class="p-badge">Node.js</span></div>
-        <span class="p-link">Ver detalles →</span>
-      </div>
-
-      <div class="bc b12 acc-v reveal" style="flex-direction:row;align-items:center;gap:2rem;flex-wrap:wrap" onclick="openModal('sistemas')">
+      <!-- Proyectos de Sistemas — card ancha con radar -->
+      <div class="bc b7 acc-v reveal" onclick="openModal('sistemas')" style="flex-direction:row;align-items:center;gap:2rem;flex-wrap:wrap">
         <div style="flex:1;min-width:200px">
-          <div class="p-cat cat-uni">Universidad · Click para ver más</div>
-          <div class="p-num">PROYECTOS DE SISTEMAS</div>
-          <div class="p-name">Bajo Nivel — Java, Ensamblador & más</div>
-          <div class="p-desc">Simulación de hilos y memoria en Java (SO), criptogramas en Ensamblador (Org. Computador), calculadora de matrices (Álgebra Lineal), simulación de impresora con grafos (Estructuras de Datos).</div>
-          <div class="p-badges">
-            <span class="p-badge">Java</span><span class="p-badge">Threads</span>
-            <span class="p-badge">Ensamblador</span><span class="p-badge">Grafos</span><span class="p-badge">Álgebra Lineal</span>
+          <div class="p-cat cat-uni">Universidad — Java · Python · MIPS</div>
+          <div class="p-num">004 — 006</div>
+          <div class="p-name">Proyectos de Sistemas</div>
+          <div class="p-desc">Planificación de CPU con hilos y semáforos reales, sistema de archivos con persistencia JSON custom, métodos numéricos matriciales — todo implementado desde cero.</div>
+          <div class="p-badges" style="margin-top:.8rem">
+            <span class="p-badge">Java Threads</span><span class="p-badge">Semaphore</span><span class="p-badge">Python</span><span class="p-badge">Gson</span>
           </div>
-          <span class="p-link">Ver detalles →</span>
+          <span class="p-link" style="margin-top:.8rem">Ver detalles →</span>
         </div>
         <div style="flex:1;min-width:200px">
           <canvas id="chart-skills" height="150" style="width:100%"></canvas>
         </div>
+      </div>
+
+      <!-- Playfair MIPS -->
+      <div class="bc b5 acc-r reveal" onclick="openModal('sistemas')">
+        <div class="p-cat cat-uni">Universidad — Org. del Computador</div>
+        <div class="p-num">007</div>
+        <div class="p-name">Cifrado Playfair — MIPS Assembly 🔐</div>
+        <div class="p-desc">Cifrado Playfair completo en ensamblador MIPS. Construye la matriz 5×5, lee desde .txt y cifra por pares con los 3 casos del algoritmo y encriptación circular de bordes.</div>
+        <div class="p-badges">
+          <span class="p-badge">MIPS Assembly</span><span class="p-badge">MARS/SPIM</span><span class="p-badge">Playfair</span>
+        </div>
+        <span class="p-link">Ver detalles →</span>
       </div>
 
     </div>
@@ -331,7 +320,6 @@
     </div>
   </div>
 </section>
-
 
 <!-- LANGUAGES -->
 <section id="languages">
@@ -418,11 +406,11 @@
 <footer>
   <span>© 2025 Gianfranco Mongiello · Caracas 🇻🇪</span>
   <div class="social-footer">
-    <a href="https://github.com/GianfrancoMongiell0" target="_blank" class="sf-link" title="GitHub">🐙</a>
-    <a href="https://www.linkedin.com/in/gianfranco-mongiello-flores-4763031b8" target="_blank" class="sf-link" title="LinkedIn">💼</a>
-    <a href="https://instagram.com/gianfranco_mongiello" target="_blank" class="sf-link" title="Instagram">📸</a>
-    <a href="https://wa.me/584241643727" target="_blank" class="sf-link" title="WhatsApp">💬</a>
-    <a href="mailto:gianfrancomongielloflores@gmail.com" class="sf-link" title="Email">📧</a>
+    <a href="https://github.com/GianfrancoMongiell0" target="_blank" class="sf-link">🐙</a>
+    <a href="https://www.linkedin.com/in/gianfranco-mongiello-flores-4763031b8" target="_blank" class="sf-link">💼</a>
+    <a href="https://instagram.com/gianfranco_mongiello" target="_blank" class="sf-link">📸</a>
+    <a href="https://wa.me/584241643727" target="_blank" class="sf-link">💬</a>
+    <a href="mailto:gianfrancomongielloflores@gmail.com" class="sf-link">📧</a>
   </div>
 </footer>
 

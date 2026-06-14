@@ -155,31 +155,6 @@ const PROJECTS={
       '🎨 5 temas visuales: Ocean Blue · Slate Amber · Emerald Gold · Rose Night · Violet Sunset'
     ]
   },
-  agrupaciones:{
-    name:'Agrupaciones Universitarias UNIMET',
-    cat:'cat-uni',catLabel:'Universidad — Sistemas de Información',
-    repo:'https://github.com/GianfrancoMongiell0/VFinalBD',
-    desc:'Plataforma web React para gestionar las agrupaciones estudiantiles de la UNIMET. Permite registrar agrupaciones, gestionar miembros y coordinar actividades. Proyecto grupal de la materia Sistemas de Información.',
-    stack:['React','JavaScript','CSS'],
-    features:[
-      'CRUD completo de agrupaciones estudiantiles',
-      'Gestión de miembros por agrupación',
-      'Registro de actividades y eventos',
-      'Interfaz responsive'
-    ]
-  },
-  condominio:{
-    name:'Gestor de Condominios Web',
-    cat:'cat-uni',catLabel:'Universidad — Ing. de Software',
-    desc:'Sistema web en Angular para la administración de condominios. Cubre gestión de residentes, control de pagos y comunicados internos. Proyecto grupal de Ingeniería de Software con metodología formal de desarrollo.',
-    stack:['Angular','TypeScript','CSS'],
-    features:[
-      'CRUD de residentes y propiedades',
-      'Control de pagos de condominio',
-      'Sistema de comunicados internos',
-      'Reportes de morosos'
-    ]
-  },
   notas:{
     name:'Task Manager API — Base de Datos',
     cat:'cat-uni',catLabel:'Universidad — Base de Datos',
